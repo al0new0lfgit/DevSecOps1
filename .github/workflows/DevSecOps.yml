@@ -3,16 +3,16 @@ name: CI
 on: [push]
 
 jobs:
-sast_scan:
+   sast_scan:
    - name: Run Bandit Scan
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
     
-    steps:
-      uses: actions/checkout@v2
-    - name: Checkout Code
+   steps:
+   - name: Checkout Code   
+   uses: actions/checkout@v2
 
-    - name: Set up python   
-      uses: actions/setup-python@v2
+   -name: Set up python   
+    uses: actions/setup-python@v2
       with:
         python-version: 3.8
     - name: Run Bandit Scan
